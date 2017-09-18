@@ -1,0 +1,27 @@
+{
+  "name": "frontend-boilerplates",
+  "version": "0.1.0",
+  "description": "Pismo boilerplates for new frontend projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pismo/frontend-boilerplates.git"
+  },
+  "keywords": [
+    "pismo",
+    "frontend",
+    "boilerplate",
+    "stack",
+    "webpack",
+    "javascript"
+  ],
+  "author": "Pismo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pismo/frontend-boilerplates/issues"
+  },
+  "homepage": "https://github.com/pismo/frontend-boilerplates#readme"
+}

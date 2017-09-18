@@ -1,0 +1,86 @@
+{
+  "name": "pismo-react-library",
+  "version": "0.1.0",
+  "description": "React library/component boilerplate",
+  "main": "dist/index.min.js",
+  "scripts": {
+    "precommit": "lint-staged",
+    "start": "BABEL_DISABLE_CACHE=1 NODE_ENV=development webpack-dev-server --config webpack.config.babel.js",
+    "build": "BABEL_DISABLE_CACHE=1 NODE_ENV=production webpack --config webpack.config.babel.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pismo/frontend-boilerplates.git"
+  },
+  "keywords": [
+    "pismo",
+    "auth",
+    "login",
+    "react",
+    "component",
+    "frontend",
+    "app"
+  ],
+  "author": "Pismo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pismo/frontend-boilerplates/issues"
+  },
+  "homepage": "https://github.com/pismo/frontend-boilerplates#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "babel-polyfill": "^6.26.0",
+    "normalize.css": "^7.0.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "tachyons": "^4.8.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.7",
+    "domready": "^1.0.8",
+    "enzyme": "^2.9.1",
+    "html-webpack-plugin": "^2.30.1",
+    "husky": "^0.14.3",
+    "jest": "^21.1.0",
+    "jsdoc": "^3.5.5",
+    "jsonlint": "^1.6.2",
+    "lint-staged": "^4.2.1",
+    "node-sass": "^4.5.3",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.1.1",
+    "path": "^0.12.7",
+    "prettier-standard": "^6.0.0",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "svg-inline-loader": "^0.8.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__mocks__/fileMock.js",
+      "\\.(css|less|scss|sass)$": "<rootDir>/src/__mocks__/styleMock.js"
+    }
+  }
+}
