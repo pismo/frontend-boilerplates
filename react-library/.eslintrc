@@ -3,9 +3,13 @@
     "ecmaVersion": 7,
     "sourceType": "module",
     "ecmaFeatures": {
-        "jsx": true
+      "experimentalObjectRestSpread": true,
+      "impliedStrict": true,
+      "globalReturn": false,
+      "jsx": true
     }
   },
+  "parser": "babel-eslint",
   "rules": {
     "comma-dangle": ["error", {
       "arrays": "always-multiline",

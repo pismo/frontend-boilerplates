@@ -10,7 +10,8 @@
   "plugins": [
     "react-hot-loader/babel",
     "transform-react-jsx",
-    "transform-object-rest-spread"
+    "transform-object-rest-spread",
+    "transform-class-properties"
   ],
   "env": {
     "test": {
