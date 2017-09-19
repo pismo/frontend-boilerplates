@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@pismo/almighty": "^0.0.6",
+    "babel-eslint": "^8.0.0",
     "enzyme": "^2.9.1",
     "husky": "^0.14.3",
     "jsonlint": "^1.6.2",
