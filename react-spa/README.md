@@ -2,8 +2,9 @@
 
 ```
   yarn global add create-react-app
-  git clone git@github.com:pismo/frontend-boilerplates
+  git clone git@github.com:pismo/frontend-boilerplates.git
   cp -R frontend-boilerplates/react-spa your-project/
+  cd your-project/
   yarn install
 ```
 
