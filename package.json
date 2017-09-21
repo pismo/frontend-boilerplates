@@ -23,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/pismo/frontend-boilerplates/issues"
   },
-  "homepage": "https://github.com/pismo/frontend-boilerplates#readme"
+  "homepage": "https://github.com/pismo/frontend-boilerplates#readme",
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^3.0.0",
+    "glob": "^7.1.2",
+    "purifycss": "^1.2.6",
+    "purifycss-webpack": "^0.7.0"
+  }
 }
