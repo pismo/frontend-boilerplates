@@ -5,20 +5,21 @@ import { AppContainer } from 'react-hot-loader'
 import OnDOMReady from 'domready'
 import App from './App'
 
-const container = document.createElement('div')
-container.setAttribute('id', 'root')
+let container
 
 const renderApp = (container = container) =>
   render(
     <AppContainer>
-      <App />
+      <App>
+        <h1>page content :)</h1>
+      </App>
     </AppContainer>,
     container
   )
 
 OnDOMReady(() => {
+  container = document.getElementById('root')
   renderApp(container)
-  document.body.appendChild(container)
 })
 
 /* HMR API */
@@ -28,9 +29,11 @@ if (module.hot) {
 
     ReactDOM.render(
       <AppContainer>
-        <NextApp />
+        <NextApp>
+          <h1>page content hot reloaded :)</h1>
+        </NextApp>
       </AppContainer>,
-      document.getElementById('root')
+      container
     )
   })
 }
