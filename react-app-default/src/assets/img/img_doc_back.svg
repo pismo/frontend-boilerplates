@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="240" viewBox="0 0 170 240">
+    <g fill="none" fill-rule="evenodd">
+        <rect width="240" height="170" x="-35" y="35" fill="#C1C7D4" rx="6" transform="matrix(0 1 1 0 -35 35)"/>
+        <rect width="218" height="148" x="-24" y="46" stroke="#D6DAE2" stroke-width="2" rx="4" transform="matrix(0 1 1 0 -35 35)"/>
+        <path fill="#D6DAE2" d="M25 100h6v40h-6zM37 80h6v80h-6zM63 90h6v120h-6zM79 70h6v140h-6zM95 130h6v80h-6zM111 90h6v120h-6zM137 28h6v20h-6zM79 28h6v20h-6zM137 190h6v20h-6z"/>
+    </g>
+</svg>

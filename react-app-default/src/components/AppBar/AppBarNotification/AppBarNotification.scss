@@ -1,0 +1,24 @@
+.notifications-btn {
+  color: var(--pismo-silver);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.notifications-bubble {
+  position: relative;
+  cursor: pointer;
+
+  &:after{
+    cursor: pointer;
+    content: ' ';
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 0.5em;
+    background-color: var(--pismo-pink);
+    top: 0em;
+    right: 0em;
+    position: absolute;
+    border: 2px solid var(--pismo-darker-blue);
+  }
+}
+

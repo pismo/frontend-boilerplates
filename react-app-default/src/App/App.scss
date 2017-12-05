@@ -1,0 +1,292 @@
+:root {
+  --pismo-blue: #3cb4e0;
+  --pismo-darker-blue: #202832;
+  --pismo-dark-blue: #2c3644;
+  --pismo-near-dark-blue: rgba(44, 54, 68, 0.5);
+  --pismo-grayish-blue: #6f7a8d;
+  --pismo-dark-grayish-blue: #586374;
+  --pismo-smoke: #6e7a8c;
+  --pismo-darker-grayish-blue: #424c5c;
+  --pismo-orange: #ec8246;
+  --pismo-light-orange: lighten(#ec8246, 1);
+  --pismo-redish-orange: #ff9800;
+  --pismo-yellow: #f5a623;
+  --pismo-dark-yellow: #ff9800;
+  --pismo-pink: #ec3853;
+  --pismo-silver: #e1e5ed;
+  --pismo-dark-gray: #768092;
+  --pismo-lighter-gray: #eceef2;
+  --pismo-light-gray: rgba(236, 238, 242, 0.5);
+  --pismo-mid-gray: #a3acbc;
+  --pismo-gray: #c1c7d4;
+  --pismo-near-black: #151a21;
+  --pismo-near-white: #fafafa;
+  --pismo-light-silver: #8692a6;
+  --pismo-darker: #202732;
+  --pismo-red: #f44336;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--pismo-near-black);
+  background-color: var(--pismo-lighter-gray);
+}
+
+// Isto corrige problemas no calc de height para elementos position absolute
+html, body, #root, .App__Inner {
+  height: 100%;
+}
+
+// Corrige problemas de calc de width. Nao remova
+.App__Inner {
+  position: relative;
+}
+
+input::placeholder {
+  color: var(--pismo-gray);
+}
+
+.App {}
+
+.UserAvatar {
+  display: inline-block !important;
+}
+
+.UserAvatar--inner {
+  color: #fff;
+  font-size: 13px;
+  padding-top: 1px;
+  // font-weight: bold;
+}
+
+.BigAvatar {
+  .UserAvatar--inner {
+    font-size: 38px;
+  }
+}
+
+/* Extends tachyons */
+.pismo-link {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--pismo-near-black);
+
+  &:link, &:visited {
+    color: var(--pismo-near-black);
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: var(--pismo-orange);
+  }
+}
+
+.animate-all {
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+
+.animate-all-slow {
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.animate-max-height {
+  -webkit-transition: max-height .2s ease-in-out;
+  transition: max-height .2s ease-in-out;
+}
+
+.indent { text-indent: 1em; }
+.indent-2 { text-indent: 2em; }
+
+.overflow-y { overflow-y: auto; }
+.overflow-y-hidden { overflow-y: hidden; }
+.overflow-x { overflow-x: auto; }
+.overflow-x-hidden { overflow-x: hidden; }
+
+.bottom--3 { bottom: -3rem; }
+.bottom--4 { bottom: -4rem; }
+.bottom--5 { bottom: -5rem; }
+.bottom--6 { bottom: -6rem; }
+
+.w-89 { width: 89%; }
+.w-88 { width: 88%; }
+.w-85 { width: 85%; }
+.w-15 { width: 15%; }
+.w-95 { width: 95%; }
+.w-99 { width: 99%; }
+.w-85 { width: 85%; }
+.w-83 { width: 83%; }
+.w-75 { width: 75%; }
+.w-17 { width: 17%; }
+.w-15 { width: 15%; }
+.w-12 { width: 12%; }
+.w-11 { width: 11%; }
+.w-5 { width: 5%; }
+
+.h0 { height: 0; }
+.h3dot5 { height: 4.4rem; }
+.h3dot5-no-scrollbar { height: calc(5.5rem - 16px); }
+.h65 { height: 65px; }
+.lh-3dot5 { line-height: 4.3rem; }
+.lh-3 { line-height: 3.8rem; }
+.max-h3dot5 { max-height: 4.4rem; }
+.max-h-100 { max-height: 100%; }
+.max-h-94 { max-height: 94%; }
+.max-h0 { max-height: 0; }
+.max-h5 { max-height: 16rem; }
+
+.mw5dot5 { max-width: 26rem; }
+.mw6dot5 { max-width: 42rem; }
+
+/* These are 'safe' because they already subtract topbar or side menu size */
+.vh-100-safe {
+  /* Subtracts .menu-vertical */
+  height: calc(100vh - 3rem - 4.5rem);
+
+  @media screen and (min-width: 37rem) {
+    height: calc(100vh - 3rem);
+  }
+}
+.w-100-safe { width: calc(100% - 72px); }
+.max-vh-0 { max-height: 0; }
+.max-vh-100-safe { max-height: calc(100vh - 48px); }
+/* /safe calculations */
+
+.shadow-pismo-1 { box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .1); }
+.shadow-pismo-2 { box-shadow: 0 8px 8px 0 rgba(0, 0, 0, .1); }
+.hover-shadow-pismo-1:hover { box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .1); }
+.hover-shadow-pismo-2:hover { box-shadow: 0 8px 8px 0 rgba(0, 0, 0, .1); }
+
+.visible { visibility: visible; }
+.invisible { visibility: hidden; }
+
+.pa2dot5 { padding: .75rem .75rem .7rem .75rem; }
+.pa3dot5 { padding: 1.5rem; }
+.pv3dot5 { padding-top: 1.25rem; padding-bottom: 1.25rem; }
+.pv2dot6 { padding-top: .7rem; padding-bottom: .7rem; }
+.pv2dot5 { padding-top: .6rem; padding-bottom: .6rem; }
+.ph3dot5 { padding-left: 1.25rem; padding-right: 1.25rem; }
+.pl3dot5 { padding-left: 1.35rem; }
+.ph2dot5 { padding-left: .75rem; padding-right: .75rem; }
+.pr3dot6 { padding-right: 1.3rem; }
+
+.noclick { pointer-events: none; }
+.bb { border-top-width: 0 !important; border-left-width: 0 !important; border-right-width: 0 !important; }
+.bb-no-last:last-child { border-bottom-width: 0 !important; }
+.bt { border-left-width: 0 !important; border-right-width: 0 !important; border-bottom-width: 0 !important; }
+
+.white-important { color: #fff !important; }
+.hover-white-important:hover { color: #fff !important; }
+
+.pismo-blue { color: var(--pismo-blue); }
+.pismo-darker { color: var(--pismo-darker); }
+.pismo-darker-blue { color: var(--pismo-darker-blue); }
+.pismo-dark-blue { color: var(--pismo-dark-blue); }
+.pismo-grayish-blue { color: var(--pismo-grayish-blue); }
+.pismo-dark-grayish-blue { color: var(--pismo-dark-grayish-blue); }
+.pismo-pink { color: var(--pismo-pink); }
+.pismo-mid-gray { color: var(--pismo-mid-gray); }
+.pismo-light-gray { color: var(--pismo-light-gray); }
+.pismo-light-silver { color: var(--pismo-light-silver); }
+.pismo-silver { color: var(--pismo-silver); }
+.pismo-gray { color: var(--pismo-gray); }
+.pismo-near-black { color: var(--pismo-near-black); }
+.hover-pismo-lighter-gray:hover { color: var(--pismo-lighter-gray); }
+.hover-pismo-mid-gray:hover { color: var(--pismo-mid-gray); }
+.hover-pismo-near-white:hover { color: var(--pismo-near-white); }
+.hover-pismo-dark-blue:hover { color: var(--pismo-dark-blue); }
+.hover-pismo-darker-blue:hover { color: var(--pismo-darker-blue); }
+.hover-pismo-grayish-blue:hover { color: var(--pismo-grayish-blue); }
+.pismo-red { color: var(--pismo-red); }
+
+.bg-pismo-white { background-color: #fff }
+.bg-pismo-blue { background-color: var(--pismo-blue); }
+.bg-pismo-darker-blue { background-color: var(--pismo-darker-blue); }
+.bg-pismo-darker { background-color: var(--pismo-darker); }
+.bg-pismo-dark-blue { background-color: var(--pismo-dark-blue); }
+.bg-pismo-near-dark-blue { background-color: var(--pismo-near-dark-blue); }
+.bg-pismo-grayish-blue { background-color: var(--pismo-grayish-blue); }
+.bg-pismo-dark-grayish-blue { background-color: var(--pismo-dark-grayish-blue); }
+.bg-pismo-darker-grayish-blue { background-color: var(--pismo-darker-grayish-blue); }
+.bg-pismo-light-orange { background-color: var(--pismo-light-orange); }
+.bg-pismo-yellow { background-color: var(--pismo-yellow); }
+.bg-pismo-dark-yellow { background-color: var(--pismo-dark-yellow); }
+.bg-pismo-pink { background-color: var(--pismo-pink); }
+.bg-pismo-orange { background-color: var(--pismo-orange); }
+.bg-pismo-silver { background-color: var(--pismo-silver); }
+.bg-pismo-smoke { background-color: var(--pismo-smoke); }
+.bg-pismo-light-silver { background-color: var(--pismo-light-silver); }
+.bg-pismo-lighter-gray { background-color: var(--pismo-lighter-gray); }
+.bg-pismo-light-gray { background-color: var(--pismo-light-gray); }
+.bg-pismo-dark-gray { background-color: var(--pismo-dark-gray); }
+.bg-pismo-gray { background-color: var(--pismo-gray); }
+.bg-pismo-near-white { background-color: var(--pismo-near-white); }
+.bg-pismo-near-black { background-color: var(--pismo-near-black); }
+.bg-pismo-red { background-color: var(--pismo-red); }
+.hover-bg-pismo-near-white:hover { background-color: var(--pismo-near-white); }
+.hover-bg-pismo-light-gray:hover { background-color: var(--pismo-light-gray); }
+.hover-bg-pismo-light-orange:hover { background-color: var(--pismo-light-orange); }
+.hover-bg-pismo-dark-gray:hover { background-color: var(--pismo-dark-gray); }
+.hover-bg-pismo-dark-blue:hover { background-color: var(--pismo-dark-blue); }
+.hover-bg-pismo-darker-blue:hover { background-color: var(--pismo-darker-blue); }
+.hover-bg-pismo-darker:hover { background-color: var(--pismo-darker); }
+.hover-bg-pismo-near-black:hover { background-color: var(--pismo-near-black); }
+.hover-bg-pismo-grayish-blue:hover { background-color: var(--pismo-grayish-blue); }
+.hover-bg-pismo-dark-grayish-blue:hover { background-color: var(--pismo-dark-grayish-blue); }
+.bg-pismo-red { background-color: var(--pismo-red); }
+
+.b--pismo-blue { border-color: var(--pismo-blue); }
+.b--pismo-gray { border-color: var(--pismo-gray); }
+.b--pismo-near-black { border-color: var(--pismo-near-black); }
+.b--pismo-mid-gray { border-color: var(--pismo-mid-gray); }
+.b--pismo-darker { border-color: var(--pismo-darker); }
+.b--pismo-lighter-gray { border-color: var(--pismo-lighter-gray); }
+.b--pismo-light-silver { border-color: var(--pismo-light-silver); }
+.b--pismo-near-white { border-color: var(--pismo-near-white); }
+.hover-b--pismo-near-black:hover { border-color: var(--pismo-near-black); }
+
+/* -ns (not small) */
+@media screen and (min-width: 30rem) {
+  .w-100-safe-ns { width: calc(100% - 72px); }
+  .w-99-ns { width: 99%; }
+  .w-95-ns { width: 95%; }
+  .w-94-ns { width: 94%; }
+  .w-93-ns { width: 93%; }
+  .w-92-ns { width: 92%; }
+  .w-89-ns { width: 89%; }
+  .w-86-ns { width: 86%; }
+  .w-75-ns { width: 75%; }
+  .w-14-ns { width: 14%; }
+  .w-11-ns { width: 11%; }
+  .w-8-ns { width: 8%; }
+  .w-7-ns { width: 7%; }
+  .w-6-ns { width: 6%; }
+  .w-5-ns { width: 5%; }
+  .w400-ns { width: 400px; }
+
+  .mw5dot5-ns { max-width: 26rem; }
+  .mw6dot5-ns { max-width: 42rem; }
+
+  .max-h-100-ns { max-height: 100%; }
+  .h3dot5-ns { height: 4.4rem; }
+  .h76-ns { height: 76px; }
+  .lh-3dot5-ns { line-height: 4.3rem; }
+  .lh-3-ns { line-height: 3.8rem; }
+  .pa3dot5-ns { padding: 1.5rem; }
+  .pv3dot5-ns { padding-top: 1.4rem; padding-bottom: 1.4rem; }
+  .pv3dot4-ns { padding-top: 1.1rem; padding-bottom: 1.1rem; }
+  .ph3dot5-ns { padding-left: 1.4rem; padding-right: 1.4rem; }
+  .ph2dot5-ns { padding-left: .75rem; padding-right: .75rem; }
+
+  .bg-pismo-lighter-gray-ns { background-color: var(--pismo-lighter-gray); }
+}
+
+/* -l (large) */
+@media screen and (min-width: 60rem) {
+  .w-100-safe-l { width: calc(100% - 72px); }
+}

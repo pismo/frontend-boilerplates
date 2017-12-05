@@ -1,0 +1,10 @@
+.DataPrinter {
+  font-size: 10px;
+  z-index: 10;
+  background: #fff;
+  opacity: 0.1;
+
+  &:hover {
+    opacity: 1;
+  }
+}

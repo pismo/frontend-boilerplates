@@ -1,0 +1,21 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": "last 2 versions"
+      }
+    }],
+    ["es2015", { modules: false }],
+    "stage-2",
+    "react",
+    "react-boilerplate"
+  ],
+
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-react-jsx",
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "transform-es2015-modules-commonjs"
+  ]
+}

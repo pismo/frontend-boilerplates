@@ -1,0 +1,9 @@
+{
+  "linters": {
+    "src/**/*.js": [
+      "prettier-standard",
+      "git add"
+    ],
+    "*.rc": "jsonlint"
+  }
+}

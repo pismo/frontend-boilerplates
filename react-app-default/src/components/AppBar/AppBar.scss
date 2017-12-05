@@ -1,0 +1,13 @@
+.AppBar{
+  .app-menu-left  {
+    display: flex;
+    align-items: center;
+  }
+
+  .AppBar__Btn {
+    padding: 0.7rem;
+    color: var(--pismo-silver);
+    font-size: 24px;
+    cursor: pointer;
+  }
+}

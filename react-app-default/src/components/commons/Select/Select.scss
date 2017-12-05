@@ -1,0 +1,68 @@
+.Select {
+
+  .select-wrapper {
+    position: relative;
+
+    /* Seta */
+    &::after {
+      border-style: solid;
+      border-width: 0 0 0.1rem 0.1rem;
+      content: '';
+      display: inline-block;
+      height: 0.45rem;
+      position: relative;
+      transform: rotate(-45deg);
+      vertical-align: top;
+      width: 0.45rem;
+      float:left;
+      top: 0.95rem;
+      right: 0.95rem;
+      pointer-events: none;
+      position: absolute;
+
+      @media screen and (max-width: 37rem) {
+        right: 0.46rem;
+      }
+    }
+
+    /* Bg da seta */
+    &::before {
+      width: 2.5rem;
+      height: calc(100% - .125rem - 0.0625rem);
+      content: ' ';
+      background-color: #f2f3f5;
+      pointer-events: none;
+      top:0.0625rem;
+      right:0;
+      position: absolute;
+      transition: all .15s ease-in-out;
+
+      @media screen and (max-width: 37rem) {
+        width: 1.5rem;
+      }
+    }
+  }
+
+  &:hover {
+    .select-wrapper {
+      &::before {
+        // background: #fff;
+      }
+    }
+  }
+
+  select:disabled {
+    color: var(--pismo-light-silver);
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+    cursor: default;
+  }
+  &.Select--disabled{
+    .select-wrapper {
+      &::after {
+        border-color: var(--pismo-light-silver);
+      }
+    }
+  }
+
+}

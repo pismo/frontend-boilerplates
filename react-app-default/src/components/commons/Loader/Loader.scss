@@ -1,0 +1,60 @@
+.CRMloading {
+  color: transparent !important;
+  min-height: .8rem;
+  pointer-events: none;
+  position: relative;
+
+  &::after {
+    animation: loading 500ms infinite linear;
+    animation-name: loading;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-delay: initial;
+    animation-iteration-count: infinite;
+    animation-direction: initial;
+    animation-fill-mode: initial;
+    animation-play-state: initial;
+    border: .1rem solid var(--pismo-dark-blue);
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: .8rem;
+    left: 50%;
+    top: 50%;
+    margin-left: -.4rem;
+    margin-top: -.4rem;
+    position: absolute;
+    width: .8rem;
+    z-index: 1;
+  }
+
+  &.loading-lg {
+    min-height: 2rem;
+  }
+
+  &.loading-lg::after {
+    height: 1.6rem;
+    margin-left: -.8rem;
+    margin-top: -.8rem;
+    width: 1.6rem;
+  }
+
+  &.loading-sm {
+    transform: scale(.8);
+  }
+
+  &.loading-xl {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
